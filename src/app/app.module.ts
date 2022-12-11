@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
+import {SharedModule} from "./modules/shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {MatCardModule} from "@angular/material/card";
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        MatCardModule
+        MatCardModule,
+        SharedModule
     ],
   providers: [],
   bootstrap: [AppComponent]
