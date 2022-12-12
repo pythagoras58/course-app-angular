@@ -9,21 +9,23 @@
 <!--    <span *ngIf="num === 4">{{num}}</span>-->
   </p>
 
+</div>
+
+<div>
   <form>
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Fisrt Name</mat-label>
-        <input matInput placeholder="Fisrt Name">
+        <input [(ngModel)]="name" name="name" matInput placeholder="Fisrt Name">
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Surname</mat-label>
-        <input matInput placeholder="Surname">
+        <input [(ngModel)]="surname"  name="surname" matInput placeholder="Surname">
       </mat-form-field>
     </p>
 
-    <input type="text" placeholder="Last Name">
-    <button>Submit</button>
+    <button (click)="onFormSubmit()">Submit</button>
   </form>
 </div>

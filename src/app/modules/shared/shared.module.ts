@@ -4,6 +4,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import {CommonModule} from "@angular/common";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
+import {FormsModule} from "@angular/forms";
 
 const components = [
   HeaderComponent,
@@ -14,7 +15,8 @@ const components = [
   imports: [
     CommonModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   exports: [...components]
 })
