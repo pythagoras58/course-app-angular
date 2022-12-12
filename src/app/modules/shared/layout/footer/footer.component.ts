@@ -14,4 +14,8 @@ export class FooterComponent implements OnInit {
     console.log('NG FOOTER')
   }
 
+  onFormSubmit() : void{
+    console.log('FORM SUBMITED')
+  }
+
 }
