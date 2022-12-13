@@ -10,7 +10,9 @@ export class HeaderComponent implements OnInit{
 
   @Input() title : string | undefined;
 
+  // PIPES
   capitalText = 'CAPITAL';
+  isodate = '2011-10-05T14:48:00.000Z';
 
   constructor() {
   }
