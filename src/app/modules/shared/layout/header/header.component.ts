@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit{
   capitalText = 'CAPITAL';
   isodate = '2011-10-05T14:48:00.000Z';
 
+  amount = '3043223';
+
   constructor() {
   }
   ngOnInit(): void {
