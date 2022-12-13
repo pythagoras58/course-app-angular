@@ -24,8 +24,8 @@ export class AppComponent implements  OnInit{
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      name : [undefined, Validators.required],
-      surname : undefined
+      name : [undefined, [Validators.required, Validators.minLength(8)]],
+      surname : [undefined, [Validators.required,Validators.minLength(8)]]
     });
   }
 
