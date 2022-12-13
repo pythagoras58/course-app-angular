@@ -30,6 +30,11 @@ export class AppComponent implements  OnInit{
   }
 
   onFormSubmit() : void{
-    console.log(this.formGroup?.value)
+    if(this.formGroup?.valid === false){
+      console.log('Null Submission')
+    }else{
+      console.log(this.formGroup?.value)
+    }
+
   }
 }
