@@ -3,5 +3,23 @@
   <mat-card-content>Simple card</mat-card-content>
 </mat-card>
 
+<div>
+  <form>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Fisrt Name</mat-label>
+        <input [(ngModel)]="name" name="name" matInput placeholder="Fisrt Name">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Surname</mat-label>
+        <input [(ngModel)]="surname"  name="surname" matInput placeholder="Surname">
+      </mat-form-field>
+    </p>
+
+    <button (click)="onFormSubmit()">Submit</button>
+  </form>
+</div>
 
 <app-footer></app-footer>

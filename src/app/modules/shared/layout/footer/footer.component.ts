@@ -14,13 +14,6 @@ export class FooterComponent implements OnInit {
     console.log('NG FOOTER')
   }
 
-  // data binding
-  name : string | undefined;
-  surname : string | undefined;
-  onFormSubmit() : void{
-    console.log('FORM DATA')
-    console.log(this.name)
-    console.log(this.surname)
-  }
+
 
 }
