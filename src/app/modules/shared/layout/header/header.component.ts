@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit{
 
   amount = '3043223';
   num = 92.32;
+  birthday = new Date(1996,5,12);
   constructor() {
   }
   ngOnInit(): void {
