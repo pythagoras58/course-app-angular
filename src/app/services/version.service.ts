@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 
-@Injectable()
+@Injectable({providedIn : 'root'})
 
 export class VersionService{
   private version = '1.0.0';
