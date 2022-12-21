@@ -1,13 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Observable, of} from "rxjs";
+import {Observable, of, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements  OnInit{
+export class AppComponent implements  OnInit, OnDestroy{
   title = 'course-app';
   headerTitle = 'Pythagoras';
 
@@ -21,7 +21,7 @@ export class AppComponent implements  OnInit{
   }
 
   observableS : Observable<number> = of(1,2,3,4,5);
-
+  subscription : Subscription | undefined;
 
   ngOnInit(): void {
     this.displayObservableNumbers();
@@ -32,7 +32,7 @@ export class AppComponent implements  OnInit{
   }
 
   private displayObservableNumbers(): void{
-      this.observableS.subscribe(value => {
+      this.subscription = this.observableS.subscribe(value => {
         console.log(value);
       });
   }
@@ -43,5 +43,8 @@ export class AppComponent implements  OnInit{
       console.log(this.formGroup?.value)
     }
 
+  }
+
+  ngOnDestroy(): void {
   }
 }
