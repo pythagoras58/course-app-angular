@@ -41,7 +41,7 @@ export class AppComponent implements  OnInit, OnDestroy{
   }
 
   private observeFormChanges():void{
-    this.formGroup?.valueChanges.subscribe((value)=>{
+    this.formSubscription = this.formGroup?.valueChanges.subscribe((value)=>{
       console.log(value);
     })
   }
@@ -57,5 +57,6 @@ export class AppComponent implements  OnInit, OnDestroy{
   ngOnDestroy(): void {
     // prevent memory leaks in subscription
     this.subscription?.unsubscribe();
+    this.formSubscription?.unsubscribe();
   }
 }
