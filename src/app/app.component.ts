@@ -29,12 +29,20 @@ export class AppComponent implements  OnInit, OnDestroy{
       name : [undefined, [Validators.required, Validators.minLength(8)]],
       surname : [undefined, [Validators.required,Validators.minLength(8)]]
     });
+
+    this.observeFormChanges();
   }
 
   private displayObservableNumbers(): void{
       this.subscription = this.observableS.subscribe(value => {
         console.log(value);
       });
+  }
+
+  private observeFormChanges():void{
+    this.formGroup?.valueChanges.subscribe((value)=>{
+      console.log(value);
+    })
   }
   onFormSubmit() : void{
     if(this.formGroup?.valid === false){
@@ -47,5 +55,6 @@ export class AppComponent implements  OnInit, OnDestroy{
 
   ngOnDestroy(): void {
     // prevent memory leaks in subscription
+    this.subscription?.unsubscribe();
   }
 }
