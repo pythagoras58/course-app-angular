@@ -46,5 +46,6 @@ export class AppComponent implements  OnInit, OnDestroy{
   }
 
   ngOnDestroy(): void {
+    // prevent memory leaks in subscription
   }
 }
