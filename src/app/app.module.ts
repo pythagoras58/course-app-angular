@@ -7,10 +7,12 @@ import {MatCardModule} from "@angular/material/card";
 import {SharedModule} from "./modules/shared/shared.module";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HomeComponent } from './modules/home/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
