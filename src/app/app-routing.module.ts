@@ -1,8 +1,9 @@
 // create an array of routes
 
-import {Routes} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./modules/home/home/home.component";
 import {ProfileComponent} from "./modules/profile/profile.component";
+import {NgModule} from "@angular/core";
 
 const routes : Routes = [
   {
@@ -14,3 +15,10 @@ const routes : Routes = [
     component : ProfileComponent
   }
 ];
+
+
+@NgModule({
+  imports : [RouterModule.forRoot(routes)],
+  exports : [RouterModule]
+})
+export class AppRoutingModule{}

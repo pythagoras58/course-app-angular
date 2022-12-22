@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './modules/home/home/home.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import {RouterModule} from "@angular/router";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {RouterModule} from "@angular/router";
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
