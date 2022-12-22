@@ -7,11 +7,15 @@ import {NgModule} from "@angular/core";
 
 const routes : Routes = [
   {
+    path : '',
+    redirectTo : 'home'
+  },
+  {
     path : 'home',
     component : HomeComponent
   },
   {
-    path : 'profle',
+    path : 'profile',
     component : ProfileComponent
   }
 ];
