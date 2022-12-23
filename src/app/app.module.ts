@@ -11,12 +11,14 @@ import { HomeComponent } from './modules/home/home/home.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import { ProductComponent } from './modules/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
