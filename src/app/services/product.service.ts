@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
-import {ProductModel} from "../models/product.model";
+import {ProductModel, ProductResponse} from "../models/product.model";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({
@@ -14,7 +14,7 @@ export class ProductService{
   constructor(private http : HttpClient) {
   }
 
-  getProduct() : Observable<ProductModel[]>{
-    return this.http.get<ProductModel[]>(this.apiUrl+'/products');
+  getProduct() : Observable<ProductResponse>{
+    return this.http.get<ProductResponse>(this.apiUrl+'/products');
   }
 }

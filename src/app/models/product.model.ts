@@ -6,3 +6,10 @@ export interface ProductModel{
   price : number;
   rating : number;
 }
+
+export interface ProductResponse{
+  total : number;
+  skip : number;
+  limit : number;
+  product : ProductModel[];
+}
