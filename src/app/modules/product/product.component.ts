@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ProductService} from "../../services/product.service";
 import {Subscription} from "rxjs";
+import {ProductModel} from "../../models/product.model";
 
 @Component({
   selector: 'app-product',
@@ -10,6 +11,8 @@ import {Subscription} from "rxjs";
 export class ProductComponent implements OnInit, OnDestroy {
 
   productSubscription : Subscription | undefined;
+
+  products : ProductModel[] = [];
 
   constructor(private productService : ProductService) { }
 
