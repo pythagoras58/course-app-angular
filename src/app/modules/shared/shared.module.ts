@@ -2,7 +2,7 @@ import {NgModule} from "@angular/core";
 import {HeaderComponent} from "./layout/header/header.component";
 import { FooterComponent } from './layout/footer/footer.component';
 import {CommonModule} from "@angular/common";
-import {MatInputModule} from "@angular/material/input";
+import {MatLegacyInputModule as MatInputModule} from "@angular/material/legacy-input";
 import {MatIconModule} from "@angular/material/icon";
 import {FormsModule} from "@angular/forms";
 import {BirthdayPipe} from "./pipes/birthday.pipe";
