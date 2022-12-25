@@ -5,6 +5,8 @@ export interface ProductModel{
   description : string;
   price : number;
   rating : number;
+
+  thumbnail : string;
 }
 
 export interface ProductResponse{
