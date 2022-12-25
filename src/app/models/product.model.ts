@@ -1,11 +1,14 @@
 
-export interface ProductModel{
+export interface Product{
   id : number;
   title : string;
   description : string;
   price : number;
-  rating : number;
 
+  brand : string;
+
+  category : string;
+  rating : number;
   thumbnail : string;
 }
 
@@ -13,5 +16,5 @@ export interface ProductResponse{
   total : number;
   skip : number;
   limit : number;
-  product : ProductModel[];
+  products : Product[];
 }

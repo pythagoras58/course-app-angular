@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ProductService} from "../../services/product.service";
 import {Subscription} from "rxjs";
-import {ProductModel} from "../../models/product.model";
+import {Product} from "../../models/product.model";
 
 @Component({
   selector: 'app-product',
@@ -12,13 +12,15 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   productSubscription : Subscription | undefined;
 
-  products : ProductModel[] = [];
+  products : Product[] = [];
 
   constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
-   this.productSubscription = this.productService.getProduct().subscribe((products)=>{
-      console.log(products)
+    this.productService.getProduct().subscribe((productRes)=>{
+      console.log(productRes);
+      this.products = productRes.products;
+      console.log(this.products)
     }, (error) =>{
       console.log(error.message())
     });
