@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 import {Observable, of, Subscription} from "rxjs";
 
 @Component({
@@ -16,9 +16,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   name : string | undefined;
   surname : string | undefined;
 
-  formGroup : FormGroup | undefined;
+  formGroup : UntypedFormGroup | undefined;
 
-  constructor(private formBuilder : FormBuilder) {
+  constructor(private formBuilder : UntypedFormBuilder) {
   }
 
   observableS : Observable<number> = of(1,2,3,4,5);
