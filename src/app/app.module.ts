@@ -14,6 +14,9 @@ import {AppRoutingModule} from "./app-routing.module";
 import { ProductComponent } from './modules/product/product.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {NgOptimizedImage} from "@angular/common";
+import {MatDatepicker, MatDatepickerModule} from "@angular/material/datepicker";
+import {MatIconModule} from "@angular/material/icon";
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -22,19 +25,22 @@ import {NgOptimizedImage} from "@angular/common";
     ProfileComponent,
     ProductComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatCardModule,
-        SharedModule,
-        MatInputModule,
-        FormsModule,
-        ReactiveFormsModule,
-        RouterModule,
-        AppRoutingModule,
-        HttpClientModule,
-        NgOptimizedImage
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    SharedModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgOptimizedImage,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
