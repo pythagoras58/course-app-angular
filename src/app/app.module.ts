@@ -17,6 +17,7 @@ import {NgOptimizedImage} from "@angular/common";
 import {MatDatepicker, MatDatepickerModule} from "@angular/material/datepicker";
 import {MatIconModule} from "@angular/material/icon";
 import {MatNativeDateModule} from "@angular/material/core";
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     NgOptimizedImage,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatIconModule
+    MatIconModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
